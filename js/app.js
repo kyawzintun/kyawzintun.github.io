@@ -1,5 +1,6 @@
 //jQuery is required to run this code
 $(document).ready(function() {
+  typeWriter();
   scaleVideoContainer();
   initBannerVideoSize('.video-container .poster img');
   initBannerVideoSize('.video-container .filter');
@@ -43,4 +44,17 @@ function scaleBannerVideoSize(element){
       }
       $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
   });
+}
+
+function typeWriter() {
+  var i = 0;
+  var txt = 'Kyaw Zin Tun';
+  var speed = 100;
+  (function repeatTypeWriting() {
+    if(i < txt.length) {
+      document.getElementById("title").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(repeatTypeWriting, speed);
+    }
+  })();
 }
