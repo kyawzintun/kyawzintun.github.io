@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 40px;
+  font-family: 'raleway-bold';;
+}
+
+.header-bar {
+  margin: 25px 0 75px 0;
+  width: 110px;
+  height: 4px;
+  background: #444649;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 12pt; 
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .header-bar {
+    margin: 25px 0 100px 0;
+  }
+}
