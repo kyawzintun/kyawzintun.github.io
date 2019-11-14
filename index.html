@@ -10,12 +10,13 @@
   <meta name="robots" content="index,follow,noodp">
   <meta name="googlebot" content="index,follow">
   <meta name="url" content="https://kyawzintun.github.io/">
+  <link rel="canonical" href="https://kyawzintun.github.io/">
   <meta name="twitter:site" content="@cukyawzintun">
   <meta name="twitter:creator" content="@cukyawzintun">
   <meta name="twitter:title" content="kyaw zin tun">
   <meta property="og:url" content="https://kyawzintun.github.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="kyaw zin tun">
+  <meta name="og:title" property="og:title" content="kyaw zin tun">
   <meta property="og:description" content="Portfolio of Web Developer &amp; - Kyaw Zin Tun">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -42,13 +43,13 @@
       <div id="particles-js" class="canvas-wrapper"></div>
       <div class="flex">
         <div class="text">
-          <h2 class="content__title">KyawZinTun</h2>
+          <h1 class="content__title">Kyaw Zin Tun</h1>
           <h3 class="content__subtitle">
             I'm a front-end web developer
           </h3>
         </div>
         <section id="scroll-down" class="scroll-btn">
-          <a href="#portfolio"><span></span></a>
+          <a href="#about"><span></span></a>
         </section>
       </div>
     </section>
@@ -67,18 +68,39 @@
         </button>
         <ul id="menu" hidden>
           <li><a class="active" href="#home">Home</a></li>
-          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <section id="about">
+      <div class="container flex">
+        <div class="header">
+          ABOUT ME
+        </div>
+        <hr class="star-dark"></hr>
+        <div class="about-wrap">
+          <div class="col-1">
+            <h2>
+              Hi. I’m Kyaw Zin Tun, a front end developer from Yangon, Myanmar. Please take a look around!
+            </h2>
+          </div>
+          <div class="col-2">
+            I am a Front End developer with  over 4 years of professional experience building multiple websites and web applications from scratch. 
+            I specialize in creating web applications and have professional experience working with Angular, React and NodeJS. 
+            I also have experience working with Vue and GraphQL.
+            Feel free to take a look at my latest projects on the <a class="highlight" href="#portfolio">portfolio</a> page.
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="portfolio">
       <div class="container flex">
         <div class="header">
           PROJECTS
         </div>
-        <div class="header-bar"></div>
+        <hr class="star-dark"></hr>
         <div class="filter-wrap">
           <div class="flex row">
             <div class="filter" id="all">ALL</div>
@@ -103,7 +125,7 @@
         <div class="header">
           CONTACT
         </div>
-        <div class="header-bar"></div>
+        <hr class="star-dark"></hr>
         <div class="highlight">
           Have a question or want to work together?
         </div>
@@ -113,12 +135,6 @@
           <textarea id="message"
             placeholder="Your Message" 
             type="text" name="message" required></textarea>
-          <!-- <div id="success">
-            <div>
-              Your message was sent successfully. Thanks!
-              <span id="close" class="mdi mdi-close"></span>
-            </div>
-          </div> -->
           <div id="info">
             This feature is not available right now.
           </div>
