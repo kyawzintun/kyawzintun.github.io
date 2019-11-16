@@ -127,11 +127,15 @@ const createListWithTemplate = projects => {
   const template = getId("project-list");
   projects.forEach(({ name, image, link }) => {
     const column = document.importNode(template.content, true);
-    const projectPhoto = column.querySelector(".project-photo");
+    const webpImg = column.querySelector(".webp");
+    const pngImg = column.querySelector(".png");
+    const finalImg = column.querySelector(".final-img");
     const projectTitle = column.querySelector(".project-title");
     const aTag = column.querySelector(".visit-btn");
-    projectPhoto.src = `./img/projects/${image}.png`;
-    projectPhoto.alt = name;
+    webpImg.srcset = `./img/projects/${image}.webp`;
+    pngImg.srcset = `./img/projects/${image}.png`;
+    finalImg.src = `./img/projects/${image}.png`;
+    finalImg.alt = name;
     projectTitle.textContent = name;
     aTag.href = link;
     div.appendChild(column);

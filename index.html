@@ -198,7 +198,11 @@
   <template id="project-list">
     <div class="column">
       <div class="card">
-        <img class="project-photo">
+        <picture class="project-photo">
+          <source class="webp" type="image/webp">
+          <source class="png" type="image/jpeg">
+          <img class="final-img">
+        </picture>
       </div>
       <div class="project-desc">
         <div class="bold project-title"></div>
