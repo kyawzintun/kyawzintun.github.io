@@ -1,8 +1,5 @@
 const getId = id => document.getElementById(id);
-const all = getId("all");
-const fullstack = getId("fullstack");
-const frontend = getId("frontend");
-const visualization = getId("visualization");
+const projectSelector = document.querySelectorAll('.filter');
 const contactForm = getId("contact-form");
 
 const apps = [
@@ -151,7 +148,17 @@ const removeProjectList = () => {
   getId("gallery").innerHTML = '';
 }
 
-const addActiveClass = id => getId(id).classList.add('active');
+const moveSelector = ({offsetLeft, clientWidth}) => {
+  const selector = document.querySelector(".selector");
+  selector.style.left = `${offsetLeft}px`;
+  selector.style.width = `${clientWidth}px`;
+};
+
+const addActiveClass = id => {
+  const activeItem = getId(id);
+  activeItem.classList.add('active');
+  moveSelector(activeItem);
+};
 
 const removeActiveClass = () => {
   const filterBtns = document.querySelectorAll('.filter');
@@ -165,25 +172,24 @@ const changeTab = id => {
   filterProjectById(id, apps);
 }
 
-all.onclick = () => changeTab('all');
-
-fullstack.onclick = () => changeTab("fullstack");
-
-frontend.onclick = () => changeTab("frontend");
-
-visualization.onclick = () => changeTab("visualization");
+[...projectSelector].forEach(ele => {
+  const id = ele.getAttribute('id');
+  ele.addEventListener('click', function() {
+    changeTab(id);
+  })
+});
 
 const sendEmail = e => {
   e.preventDefault();
   const infoMsg = getId('info');
   infoMsg.style.display = 'block';
-  // const name = getId('name').value;
-  // const email = getId('email').value;
-  // const message = getId('message').value;
-  // window.open("mailto:email?subject=name&body=message");
 }
 
 contactForm.addEventListener("submit", sendEmail);
 
-filterProjectById('fullstack', apps);
+const init = () => {
+  filterProjectById('fullstack', apps);
+  moveSelector(getId("fullstack"));
+}
 
+init();
