@@ -5,19 +5,24 @@ const menu = document.querySelector(".navigation ul");
 const navLists = document.querySelectorAll("#menu li");
 const navChilds = document.querySelectorAll('#menu li a');
 
-const toggleActive = e => {
-  [...navChilds].forEach(a => a.classList.remove("active"));
-  e.target.classList.add('active');
-}
-
-[...navLists].forEach(nav => {
-  nav.addEventListener("click", toggleActive);
-});
-
-toggleMenu.addEventListener("click", function() {
+const showHideMenu = () => {
   const open = JSON.parse(toggleMenu.getAttribute("aria-expanded"));
   toggleMenu.setAttribute("aria-expanded", !open);
   menu.hidden = !menu.hidden;
+}
+
+toggleMenu.addEventListener("click",showHideMenu);
+
+const toggleActive = e => {
+  [...navChilds].forEach(a => a.classList.remove("active"));
+  e.target.classList.add("active");
+};
+
+[...navLists].forEach(nav => {
+  nav.addEventListener("click", function(e) {
+    toggleActive(e);
+    showHideMenu();
+  });
 });
 
 function detectScroll() {

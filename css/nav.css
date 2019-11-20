@@ -25,7 +25,8 @@ header {
 }
 
 [hidden] { 
-  display: none; 
+  display: none;
+  opacity: 0; 
   height: 10px !important;
 }
 
