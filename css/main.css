@@ -39,7 +39,7 @@ section {
   line-height: 11pt;
   padding: 0 10px;
   color: #fff;
-  height: calc(100vh + 53px);
+  height: 100vh;
 }
 
 .flex {
@@ -47,6 +47,18 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#app {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
 }
 
 .flex.wrap {
@@ -142,7 +154,6 @@ section {
   }
 }
 
-
 .content__title {
   font-family: 'Vidaloka', serif;
   font-size: 10vw;
@@ -219,13 +230,12 @@ section {
 .selector {
   position: absolute;
   display:inline-block;
-  height: 100%;
+  height: 30px;
   left:0px;
-  top:0px;
+  margin-top: -1px;
   border-radius: 1px;
   background: #ff8a00;
   color: #fff;
-  line-height: 35px;
   z-index: 1;
   transition-duration:0.6s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);

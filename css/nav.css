@@ -1,5 +1,4 @@
 header {
-  bottom: -53px;
   left: 0;
   position: absolute;
   height: 50px;
@@ -26,7 +25,6 @@ header {
 
 [hidden] { 
   display: none;
-  opacity: 0; 
   height: 10px !important;
 }
 
@@ -146,6 +144,10 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
+
+  [hidden] {
+    opacity: 0;
+  }
 }
 
 @media ( min-width: 40rem ) {
@@ -181,5 +183,4 @@ header {
     border-radius: 2em;
     transition:background .25s ease-out;
   }
-
 }
