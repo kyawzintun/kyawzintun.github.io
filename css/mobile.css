@@ -1,4 +1,12 @@
 @media screen and (max-width: 600px){
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: inline;
+  }
+
   .content__subtitle {
     letter-spacing: 0;
     font-size: 1em;

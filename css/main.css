@@ -173,6 +173,10 @@ canvas {
   text-shadow: -1px 0 #F00147, 0 1px #F00147, 1px 0 #F00147, 0 -1px #F00147;
 }
 
+.mobile-view {
+  display: none;
+}
+
 .content__subtitle {
   font-size: 1.25em;
   color: #ff8a00;
