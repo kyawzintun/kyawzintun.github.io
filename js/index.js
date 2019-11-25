@@ -162,7 +162,7 @@ const addActiveClass = id => {
 
 const removeActiveClass = () => {
   const filterBtns = document.querySelectorAll('.filter');
-  [...filterBtns].forEach(btn => btn.classList.remove('active'));
+  filterBtns.forEach(btn => btn.classList.remove("active"));
 }
 
 const changeTab = id => {
@@ -172,11 +172,11 @@ const changeTab = id => {
   filterProjectById(id, apps);
 }
 
-[...projectSelector].forEach(ele => {
-  const id = ele.getAttribute('id');
-  ele.addEventListener('click', function() {
+projectSelector.forEach(ele => {
+  const id = ele.getAttribute("id");
+  ele.addEventListener("click", function() {
     changeTab(id);
-  })
+  });
 });
 
 const sendEmail = e => {

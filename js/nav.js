@@ -14,11 +14,11 @@ const showHideMenu = () => {
 toggleMenu.addEventListener("click",showHideMenu);
 
 const toggleActive = e => {
-  [...navChilds].forEach(a => a.classList.remove("active"));
+  navChilds.forEach(a => a.classList.remove("active"));
   e.target.classList.add("active");
 };
 
-[...navLists].forEach(nav => {
+navLists.forEach(nav => {
   nav.addEventListener("click", function(e) {
     toggleActive(e);
     showHideMenu();
@@ -34,18 +34,18 @@ function detectScroll() {
 }
 
 function onScroll() {
-  const scrollPos = $(document).scrollTop();
-  $("#menu a").each(function() {
-    const currLink = $(this);
-    const refElement = $(currLink.attr("href"));
+  const scrollPos = window.scrollY;
+  const navLinks = document.querySelectorAll('#menu a');
+  navLinks.forEach(link => {
+    const attrValue = link.getAttribute("href");
+    const { offsetTop, offsetHeight } = document.querySelector(attrValue);
     if (
-      refElement.position().top <= scrollPos &&
-      refElement.position().top + refElement.height() > scrollPos
+      (offsetTop <= scrollPos) &&
+      (offsetTop + offsetHeight > scrollPos)
     ) {
-      $("#menu ul li a").removeClass("active");
-      currLink.addClass("active");
+      link.classList.add('active');
     } else {
-      currLink.removeClass("active");
+      link.classList.remove('active');
     }
   });
 }
