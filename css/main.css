@@ -3,6 +3,7 @@
 @font-face {
   font-family: Impact;
   src: url('../fonts/impact.ttf');
+  font-display: swap;
 }
 
 *, *::after, *::before {
