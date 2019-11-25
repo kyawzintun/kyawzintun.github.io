@@ -53,14 +53,3 @@ section#contact .button {
   outline: 0; 
   cursor: pointer;
 }
-
-@media screen and (min-width: 600px) {
-  #contact {
-    line-height: 18pt;
-    padding: 100px 0 130px 0;
-  }
-
-  section#contact form {
-    min-width: 500px; 
-  }
-}

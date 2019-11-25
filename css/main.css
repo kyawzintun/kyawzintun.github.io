@@ -1,5 +1,10 @@
 /* ---- reset ---- */
 
+@font-face {
+  font-family: Impact;
+  src: url('../fonts/impact.ttf');
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -155,15 +160,17 @@ canvas {
 }
 
 .content__title {
-  font-family: 'Vidaloka', serif;
-  font-size: 10vw;
+  font-family: Impact, 'Vidaloka', serif;
+  font-size: 8rem;
   font-weight: normal;
-  color: #fff;
+  color: #000;
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
   pointer-events: none;
   line-height: 1;
+  text-transform: uppercase;
+  text-shadow: -1px 0 #F00147, 0 1px #F00147, 1px 0 #F00147, 0 -1px #F00147;
 }
 
 .content__subtitle {
@@ -175,6 +182,53 @@ canvas {
   text-indent: 0.5em;
   font-weight: bold;
   position: relative;
+}
+
+/* navigation */
+header {
+  left: 0;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background: #1B242F;
+  border-bottom: 3px solid #04C2C9;
+  z-index: 99;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#logo img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+[hidden] { 
+  display: none;
+  height: 10px !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#menu a {
+  font-size: 16px;
+  color: #fff;
+}
+
+#menu li a:hover,
+#menu a.active {
+  color: #ff8a00;
 }
 
 /* about */
@@ -346,50 +400,6 @@ canvas {
   border: 1px solid #bce8f1; 
 }
 
-@media screen and (max-width: 600px){
-  .project-desc, .visit-btn {
-    font-size: 12px;
-  }
-
-  .project-desc .bold{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-  }
-
-  .visit-btn {
-    width: 100px;
-    line-height: 15px;;
-  }
-}
-
-@media screen and (max-width: 960px){
-  #gallery .column {
-    flex: 0 0 70%;
-  }
-
-  .about-wrap {
-    flex-direction: column;
-    max-width: 500px;
-  }
-}
-
-@media screen and (min-width: 600px){
-  .filter {
-    font-size: 11pt;
-    margin: 0 15px;
-    padding: 0 30px;
-  }
-}
-
-@media screen and (min-width: 960px){
-  .filter {
-    font-size: 13pt;
-    padding: 0 40px;
-    margin: 0 25px;
-  }
-}
-
 /* footer */
 footer {
   background: #1B242F;
@@ -464,13 +474,6 @@ footer .footnote {
 
   50% {
     transform: translate(0, 5px);
-  }
-}
-
-@media ( max-width: 40rem ) { 
-  .content__subtitle {
-    letter-spacing: 0;
-    font-size: 1em;
   }
 }
 
