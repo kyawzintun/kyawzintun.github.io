@@ -145,6 +145,18 @@
 }
 
 @media screen and (min-width: 600px){
+  body {
+    font-size: 12pt; 
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .header-bar {
+    margin: 25px 0 100px 0;
+  }
+  
   .filter {
     font-size: 11pt;
     margin: 0 15px;

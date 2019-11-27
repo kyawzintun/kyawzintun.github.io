@@ -405,6 +405,63 @@ header {
   border: 1px solid #bce8f1; 
 }
 
+/* contact */
+section#contact {
+  background: #252934;
+  color: #fff;
+  padding-top: 175px;
+}
+
+section#contact svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section#contact .header-bar {
+  margin: 25px 0 40px 0;
+  background: #fff;
+}
+
+section#contact .highlight {
+  font-weight: 600;
+  color: #04C2C9;
+}
+
+section#contact form {
+  margin: 40px auto 0 auto;
+  min-width: 95%; 
+}
+
+section#contact input[type="text"], 
+section#contact input[type="email"], 
+section#contact textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  padding: 10px 15px;
+  background: #1E242C;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  color: #fff; 
+}
+section#contact textarea {
+  min-height: 150px;
+  margin-bottom: 5px; 
+}
+section#contact .button {
+  float: right;
+  margin: 5px 0 0 0;
+  font-size: 12pt;
+  padding: 10px 30px;
+  color: #fff;
+  background: transparent;
+  outline: 0; 
+  cursor: pointer;
+}
+
 /* footer */
 footer {
   background: #1B242F;
@@ -515,4 +572,25 @@ hr.star-dark:after {
 #contact .star-dark:after {
   content: url('../img/contact-code.svg');
   background: #252934;
+}
+
+/* common use */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 40px;
+  font-family: 'raleway-bold';;
+}
+
+.header-bar {
+  margin: 25px 0 75px 0;
+  width: 110px;
+  height: 4px;
+  background: #444649;
 }

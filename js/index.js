@@ -125,12 +125,10 @@ const createListWithTemplate = projects => {
   projects.forEach(({ name, image, link }) => {
     const column = document.importNode(template.content, true);
     const webpImg = column.querySelector(".webp");
-    const pngImg = column.querySelector(".png");
     const finalImg = column.querySelector(".final-img");
     const projectTitle = column.querySelector(".project-title");
     const aTag = column.querySelector(".visit-btn");
     webpImg.srcset = `./img/projects/${image}.webp`;
-    pngImg.srcset = `./img/projects/${image}.png`;
     finalImg.src = `./img/projects/${image}.png`;
     finalImg.alt = name;
     projectTitle.textContent = name;
@@ -187,7 +185,18 @@ const sendEmail = e => {
 
 contactForm.addEventListener("submit", sendEmail);
 
+const preloadImage = () => {
+  apps.forEach(app => {
+    let preloadLink = document.createElement("link");
+    preloadLink.href = `./img/projects/${app.image}.webp`;
+    preloadLink.rel = "preload";
+    preloadLink.as = "image";
+    document.head.appendChild(preloadLink);
+  })
+}
+
 const init = () => {
+  preloadImage();
   filterProjectById('fullstack', apps);
   moveSelector(getId("fullstack"));
 }
