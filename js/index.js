@@ -190,8 +190,6 @@ const preloadImage = () => {
   apps.forEach((app) => {
     let preloadLink = document.createElement("link");
     preloadLink.href = `./img/projects/${app.image}.webp`;
-    preloadLink.rel = "preload";
-    preloadLink.as = "image";
     document.head.appendChild(preloadLink);
   });
 };

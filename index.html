@@ -27,11 +27,6 @@
   <link rel="preload" href="./css/mobile.css" as="style">
   <link rel="preload" href="./fonts/impact.ttf" as="font" type="font/ttf">
   <link rel="preload" href="./img/avatar.png" as="image">
-  <link rel="preload" href="./js/infinite-light/three.min.js" as="script">
-	<link rel="preload" href="./js/infinite-light/postprocessing.min.js" as="script">
-	<link rel="preload" href="./js/infinite-light/infinite-lights.js" as="script">
-	<link rel="preload" href="./js/infinite-light/distortions.js" as="script">
-	<link rel="preload" href="./js/infinite-light/loader.js" as="script">
   <link rel="preload" href="./js/index.js" as="script">
   <link rel="preload" href="./js/nav.js" as="script">
 
@@ -51,8 +46,8 @@
 <body>
   <div class="overflow-wrap">
     <!-- HOME -->
-    <section id="home" class="flex">
-      <div id="app"></div>
+    <section id="home" class="flex height-fix">
+      <div id="particles-js" class="canvas-wrapper"></div>
       <div class="flex">
         <div class="text">
           <h1 class="content__title">
@@ -223,14 +218,10 @@
       </a>
     </div>
   </template>
-  <!-- infinite lights dependices -->
-  <script src="js/infinite-light/three.min.js"></script>
-	<script src="js/infinite-light/postprocessing.min.js"></script>
-	<script src="js/infinite-light/infinite-lights.js"></script>
-	<script src="js/infinite-light/distortions.js"></script>
-	<script src="js/infinite-light/loader.js"></script>
-
+  
+  <script src="./js/particles.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/particles.js"></script>
   <script src="./js/nav.js"></script>
 </body>
 </html>
