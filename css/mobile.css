@@ -1,50 +1,33 @@
-header {
-  left: 0;
-  position: absolute;
-  height: 50px;
-  width: 100%;
-  background: #1B242F;
-  border-bottom: 3px solid #04C2C9;
-  z-index: 99;
-  cursor: pointer;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@media screen and (max-width: 600px){
+  .desktop-view {
+    display: none;
+  }
 
-#logo {
-  margin-top: 10px;
-  margin-left: 10px;
-}
+  .mobile-view {
+    display: inline;
+  }
 
-#logo img {
-  width: 32px;
-  border-radius: 50%;
-}
+  .content__subtitle {
+    letter-spacing: 0;
+    font-size: 1em;
+  }
 
-[hidden] { 
-  display: none;
-  height: 10px !important;
-}
+  .project-desc, .visit-btn {
+    font-size: 12px;
+  }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+  .project-desc .bold{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+  }
 
-#menu a {
-  font-size: 16px;
-  color: #fff;
-}
+  .visit-btn {
+    width: 100px;
+    line-height: 15px;;
+  }
 
-#menu li a:hover,
-#menu a.active {
-  color: #ff8a00;
-}
-
-@media ( max-width: 40rem ) {
+  /* navigation style in mobile */
   .navigation button {
     display: block;
     position: absolute;
@@ -150,7 +133,46 @@ header {
   }
 }
 
-@media ( min-width: 40rem ) {
+@media screen and (max-width: 960px){
+  #gallery .column {
+    flex: 0 0 70%;
+  }
+
+  .about-wrap {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 600px){
+  body {
+    font-size: 12pt; 
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .header-bar {
+    margin: 25px 0 100px 0;
+  }
+  
+  .filter {
+    font-size: 11pt;
+    margin: 0 15px;
+    padding: 0 30px;
+  }
+
+  #contact {
+    line-height: 18pt;
+    padding: 100px 0 130px 0;
+  }
+
+  section#contact form {
+    min-width: 500px; 
+  }
+
+  /* navigation style in mobile */
   .navigation button { display: none }
   
   #menu {
@@ -182,5 +204,13 @@ header {
     margin: -4px;
     border-radius: 2em;
     transition:background .25s ease-out;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .filter {
+    font-size: 13pt;
+    padding: 0 40px;
+    margin: 0 25px;
   }
 }

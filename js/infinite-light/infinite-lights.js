@@ -1,4 +1,3 @@
-console.log(POSTPROCESSING);
 class App {
   constructor(container, options = {}) {
     // Init ThreeJS Basics
@@ -87,7 +86,6 @@ class App {
         resolutionScale: 1
       })
     );
-    console.log(this.assets.smaa, this.camera);
     const smaaPass = new POSTPROCESSING.EffectPass(
       this.camera,
       new POSTPROCESSING.SMAAEffect(
@@ -376,7 +374,6 @@ class CarLights {
         "#include <getDistortion_vertex>",
         options.distortion.getDistortion
       );
-      console.log(shader.vertex);
     };
     let mesh = new THREE.Mesh(instanced, material);
     mesh.frustumCulled = false;

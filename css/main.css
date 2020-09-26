@@ -1,5 +1,11 @@
 /* ---- reset ---- */
 
+@font-face {
+  font-family: Impact;
+  src: url('../fonts/impact.ttf');
+  font-display: swap;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -155,15 +161,21 @@ canvas {
 }
 
 .content__title {
-  font-family: 'Vidaloka', serif;
-  font-size: 10vw;
+  font-family: Impact, 'Vidaloka', serif;
+  font-size: 8rem;
   font-weight: normal;
-  color: #fff;
+  color: #000;
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
   pointer-events: none;
   line-height: 1;
+  text-transform: uppercase;
+  text-shadow: -1px 0 #F00147, 0 1px #F00147, 1px 0 #F00147, 0 -1px #F00147;
+}
+
+.mobile-view {
+  display: none;
 }
 
 .content__subtitle {
@@ -175,6 +187,53 @@ canvas {
   text-indent: 0.5em;
   font-weight: bold;
   position: relative;
+}
+
+/* navigation */
+header {
+  left: 0;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background: #1B242F;
+  border-bottom: 3px solid #04C2C9;
+  z-index: 99;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#logo img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+[hidden] { 
+  display: none;
+  height: 10px !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#menu a {
+  font-size: 16px;
+  color: #fff;
+}
+
+#menu li a:hover,
+#menu a.active {
+  color: #ff8a00;
 }
 
 /* about */
@@ -346,48 +405,61 @@ canvas {
   border: 1px solid #bce8f1; 
 }
 
-@media screen and (max-width: 600px){
-  .project-desc, .visit-btn {
-    font-size: 12px;
-  }
-
-  .project-desc .bold{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-  }
-
-  .visit-btn {
-    width: 100px;
-    line-height: 15px;;
-  }
+/* contact */
+section#contact {
+  background: #252934;
+  color: #fff;
+  padding-top: 175px;
 }
 
-@media screen and (max-width: 960px){
-  #gallery .column {
-    flex: 0 0 70%;
-  }
-
-  .about-wrap {
-    flex-direction: column;
-    max-width: 500px;
-  }
+section#contact svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-@media screen and (min-width: 600px){
-  .filter {
-    font-size: 11pt;
-    margin: 0 15px;
-    padding: 0 30px;
-  }
+section#contact .header-bar {
+  margin: 25px 0 40px 0;
+  background: #fff;
 }
 
-@media screen and (min-width: 960px){
-  .filter {
-    font-size: 13pt;
-    padding: 0 40px;
-    margin: 0 25px;
-  }
+section#contact .highlight {
+  font-weight: 600;
+  color: #04C2C9;
+}
+
+section#contact form {
+  margin: 40px auto 0 auto;
+  min-width: 95%; 
+}
+
+section#contact input[type="text"], 
+section#contact input[type="email"], 
+section#contact textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  padding: 10px 15px;
+  background: #1E242C;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  color: #fff; 
+}
+section#contact textarea {
+  min-height: 150px;
+  margin-bottom: 5px; 
+}
+section#contact .button {
+  float: right;
+  margin: 5px 0 0 0;
+  font-size: 12pt;
+  padding: 10px 30px;
+  color: #fff;
+  background: transparent;
+  outline: 0; 
+  cursor: pointer;
 }
 
 /* footer */
@@ -467,13 +539,6 @@ footer .footnote {
   }
 }
 
-@media ( max-width: 40rem ) { 
-  .content__subtitle {
-    letter-spacing: 0;
-    font-size: 1em;
-  }
-}
-
 hr.star-dark {
   overflow: visible;
   padding: 0;
@@ -507,4 +572,25 @@ hr.star-dark:after {
 #contact .star-dark:after {
   content: url('../img/contact-code.svg');
   background: #252934;
+}
+
+/* common use */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 40px;
+  font-family: 'raleway-bold';;
+}
+
+.header-bar {
+  margin: 25px 0 75px 0;
+  width: 110px;
+  height: 4px;
+  background: #444649;
 }
