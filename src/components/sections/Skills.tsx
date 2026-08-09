@@ -22,8 +22,12 @@ export function Skills() {
         {/* Skills grid */}
         <div className="grid gap-8 sm:grid-cols-2">
           {skills.map((category, i) => (
-            <AnimatedSection key={category.name} delay={i * 0.08}>
-              <div className="rounded-xl border border-border bg-card p-6">
+            <AnimatedSection
+              key={category.name}
+              delay={i * 0.08}
+              className="h-full"
+            >
+              <div className="h-full rounded-xl border border-border bg-card p-6">
                 <h3 className="mb-4 text-sm font-medium text-foreground">
                   {category.name}
                 </h3>

@@ -85,12 +85,14 @@ export function Hero() {
         {/* Main heading */}
         <motion.h1
           variants={item}
-          className="mb-6 max-w-4xl text-4xl font-semibold leading-[1.05] tracking-tighter text-foreground sm:text-5xl md:text-6xl"
+          className="mb-6 max-w-5xl text-4xl font-semibold leading-[1.05] tracking-tighter text-foreground sm:text-5xl md:text-[clamp(2.75rem,5vw,3.5rem)]"
         >
-          Engineering Web Products
+          <span className="md:whitespace-nowrap">
+            Building Secure, Scalable Products
+          </span>
           <br />
           <span className="text-muted-foreground/80">
-            that people love to use
+            from frontend to backend
           </span>
         </motion.h1>
 
@@ -99,13 +101,15 @@ export function Hero() {
           variants={item}
           className="mb-10 max-w-xl text-base text-muted-foreground md:text-lg"
         >
-          Senior software engineer specializing in{" "}
+          Full Stack Developer with 10+ years of experience building enterprise
+          applications with{" "}
           <span className="text-foreground">React</span>,{" "}
           <span className="text-foreground">Vue</span>,{" "}
           <span className="text-foreground">Angular</span>,{" "}
-          <span className="text-foreground">NodeJS</span>, and{" "}
-          <span className="text-foreground">TypeScript</span> with experience
-          building banking, fintech, and enterprise platforms.
+          <span className="text-foreground">Node.js</span>,{" "}
+          <span className="text-foreground">Spring Boot</span>, and{" "}
+          <span className="text-foreground">TypeScript</span> across fintech and
+          banking platforms.
         </motion.p>
 
         {/* CTAs */}

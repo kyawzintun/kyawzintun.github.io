@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kyaw Zin Tun — Senior Software Engineer",
+  title: "Kyaw Zin Tun — Full Stack Developer",
   description:
-    "Senior software engineer specializing in Vue, Angular, React, Next.js, and TypeScript. Building fast, scalable web applications with a focus on performance and developer experience.",
+    "Full stack developer with 10+ years of experience building secure, scalable web applications with React, Vue, Angular, Next.js, Node.js, and Spring Boot.",
   keywords: [
     "software engineer",
     "Senior developer",
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://kyawzintun.github.io",
-    title: "Kyaw Zin Tun — Senior Software Engineer",
+    title: "Kyaw Zin Tun — Full Stack Developer",
     description:
-      "Senior software engineer specializing in Vue, Angular, React, Next.js, and TypeScript.",
+      "Full stack developer building secure, scalable web applications across fintech, banking, and enterprise platforms.",
     siteName: "Kyaw Zin Tun",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kyaw Zin Tun — Senior Software Engineer",
+    title: "Kyaw Zin Tun — Full Stack Developer",
     description:
-      "Senior software engineer specializing in Vue, Angular, React, Next.js, and TypeScript.",
+      "Full stack developer building secure, scalable web applications across fintech, banking, and enterprise platforms.",
     creator: "@kyawzintun",
   },
   robots: {
